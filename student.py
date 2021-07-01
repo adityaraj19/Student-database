@@ -139,7 +139,6 @@ class student:
         cun.execute("select * from students")
         rows=cun.fetchall()
         if len(rows)!=0:
-            self.S_table.delete(*self.S_table.get_children())
             for row in rows:
                 self.S_table.insert("",END,values=row)
                 con.commit()
